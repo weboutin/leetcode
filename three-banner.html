@@ -1,0 +1,144 @@
+<html>
+
+<body>
+    <div class="box">
+        <div class="left"></div>
+        <div class="middle"></div>
+        <div class="right"></div>
+    </div>
+</body>
+
+</html>
+<!--
+    要求上下左右边距为0，三个盒子分别横向相隔20px
+-->
+
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* 使用 float */
+    /* .left {
+        width: calc(100%/3 - 40px/3);
+        height: 100vh;
+        background-color: red;
+        float: left;
+    }
+
+    .middle {
+        width: calc(100%/3 - 40px/3);
+        margin-left: 20px;
+        height: 100vh;
+        background-color: yellow;
+        float: left;
+    }
+
+    .right {
+        width: calc(100%/3 - 40px/3);
+        margin-left: 20px;
+        height: 100vh;
+        background-color: blue;
+        float: left;
+    } */
+    /* 使用 flex */
+    /* .box {
+        display: flex;
+    }
+
+    .left {
+        flex: 1;
+        height: 100vh;
+        background-color: red;
+    }
+
+    .middle {
+        flex: 1;
+        margin-left: 20px;
+        height: 100vh;
+        background-color: yellow;
+    }
+
+    .right {
+        flex: 1;
+        margin-left: 20px;
+        height: 100vh;
+        background-color: blue;
+    } */
+
+    /* 使用绝对定位 */
+    /* 使用 middle position: absolute 或者 right top 都可以达到这个效果· */
+    /* .box {
+        position: relative;
+    }
+    .left {
+        width: calc(100%/3 - 40px/3);
+        position: absolute;
+        height: 100vh;
+        background-color: red;
+    }
+
+    .right {
+        width: calc(100%/3 - 40px/3);
+        position: absolute;
+        height: 100vh;
+        right: 0px;
+        background-color: blue;
+    }
+
+    .middle {
+        width: calc(100%/3 - 40px/3);
+        position: absolute;
+        height: 100vh;
+        margin:  0 calc(100%/3 - 40px/3 + 20px);
+        background-color: yellow;
+
+    } */
+    /* flex */
+    /* .box {
+        display: flex;
+    }
+    .left {
+        flex: 1;
+        height: 100vh;
+        background-color: red;
+    }
+
+    .right {
+        flex: 1;
+        height: 100vh;
+        background-color: blue;
+        margin-left: 20px;
+    }
+
+    .middle {
+        flex: 1;
+        height: 100vh;
+        margin-left: 20px;
+        background-color: yellow;
+
+    } */
+    /* grid */
+    .box {
+        width: 100%;
+        display: grid;
+        grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
+    }
+    .left {
+        background-color: red;
+        height: 100vh;
+        margin-right: 10px;
+    }
+    .right {
+        margin-left: 10px;
+        background-color: blue;
+        height: 100vh;
+    }
+    .middle {
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 100vh;
+        background-color: yellow;
+    }
+</style>

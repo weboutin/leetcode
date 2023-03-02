@@ -1,0 +1,37 @@
+/**
+ * 389. 找不同
+ * https://leetcode.cn/problems/find-the-difference/
+ */
+
+
+
+/**
+ * 64ms  75.08%
+ * 42.6MB  44.36%
+ */
+var findTheDifference = function (s, t) {
+    let map = {}
+    for (let i = 0; i < s.length; i++) {
+        if (!map[s[i]]) {
+            map[s[i]] = 1
+        } else {
+            map[s[i]]++
+        }
+    }
+    for (let i = 0; i < t.length; i++) {
+        if (!map[t[i]]) {
+            return t[i]
+        }
+
+        if (map[t[i]] <= 0) {
+            return t[i]
+        }
+        map[t[i]]--
+    }
+};
+
+s = "abcd"
+
+t = "abcde"
+
+findTheDifference(s, t)

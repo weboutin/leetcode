@@ -1,0 +1,49 @@
+<html>
+    <body>
+        <div class="box">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+    </body>
+</html>
+<!--
+    要求上下左右边距为0，中间距离是 20px
+-->
+
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    /* 使用 float */
+    /* .left {
+        width: calc(50% - 10px);
+        height: 100vh;
+        background-color: red;
+        float: left;
+    }
+    .right {
+        width: calc(50% - 10px);
+        margin-left: 20px;
+        height: 100vh;
+        background-color: blue;
+        float: left;
+    } */
+
+    /* 使用 flex */
+    .box {
+        display: flex;
+    }
+    .left {
+        flex: 1;
+        height: 100vh;
+        background-color: red;
+        float: left;
+    }
+    .right {
+        flex: 1;
+        margin-left: 20px;
+        height: 100vh;
+        background-color: blue;
+    }
+</style>
