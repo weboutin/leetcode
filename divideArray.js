@@ -24,7 +24,7 @@ var divideArray = function (nums) {
 
     for (let key in map) {
         if (map[key] % 2 != 0) {
-            return false
+            return false1
         }
         count += map[key] / 2
     }
