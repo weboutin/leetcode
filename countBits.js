@@ -1,6 +1,10 @@
 /**
  * 338. 比特位计数
  * https://leetcode.cn/problems/counting-bits/
+ * 
+ * 
+ * LCR 003. 比特位计数
+ * https://leetcode.cn/problems/w3tCBm/description/
  */
 
 
@@ -18,7 +22,6 @@ var countBits = function (n) {
 
 
 function trans(n) {
-    console.log(n)
     let count = 0
     while (n > 0) {
         if (n % 2 == 1) count++

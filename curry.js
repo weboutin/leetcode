@@ -1,4 +1,7 @@
-
+/**
+ * 2632. 柯里化
+ * https://leetcode.cn/problems/curry/submissions/
+ */
 const assert = require('assert')
 
 function add(a, b, c) {
@@ -6,6 +9,10 @@ function add(a, b, c) {
 }
 
 
+/**
+ * 68ms  74.18%
+ * 45.78mb  64.37%
+ */
 function curry(fn) {
     return _curry.call(this, fn, fn.length, [])
 }

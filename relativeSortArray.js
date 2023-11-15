@@ -1,6 +1,9 @@
 /**
  * 1122. 数组的相对排序
  * https://leetcode.cn/problems/relative-sort-array/
+ * 
+ * LCR 075. 数组的相对排序
+ * https://leetcode.cn/problems/0H97ZC/submissions/
  */
 
 

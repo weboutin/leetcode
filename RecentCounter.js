@@ -1,6 +1,9 @@
 /**
  * 933. 最近的请求次数
  * https://leetcode.cn/problems/number-of-recent-calls/
+ * 
+ * LCR 042. 最近的请求次数
+ * https://leetcode.cn/problems/H8086Q/description/
  */
 
 

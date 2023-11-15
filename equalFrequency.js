@@ -1,4 +1,7 @@
-
+/**
+ * 2423. 删除字符使频率相同
+ * https://leetcode.cn/problems/remove-letter-to-equalize-frequency/description/
+ */
 
 
 /**
@@ -8,11 +11,6 @@
 var equalFrequency = function (word) {
     let map = {}
 
-    let max = Number.MIN_VALUE
-
-    let min = Number.MAX_VALUE
-
-
     for (let i = 0; i < word.length; i++) {
 
         if (map[word[i]] == undefined) {
@@ -20,12 +18,36 @@ var equalFrequency = function (word) {
         } else {
             map[word[i]]++
         }
-        max = Math.max(max, map[word[i]])
-        min = Math.min(min, map[word[i]])
 
     }
 
+    let set = new Set()
 
-    return Math.abs(max - min) == 1
+    for (let key in map) {
+        set.add(map[key])
+    }
+
+    let arr = []
+
+    set.forEach(e => arr.push(e))
+
+    if (set.size == 1 && arr[0] == 1) {
+        return true
+    }
+
+    if (set.size > 2) {
+        return false
+    }
+
+    if (Math.abs(arr[0] - arr[1]) != 1) {
+        return false
+    }
+
+    for (let key in map) {
+        set.add(map[key])
+    }
+
+
+    return true
 
 };
